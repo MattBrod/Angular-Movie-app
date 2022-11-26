@@ -1,0 +1,56 @@
+body {
+  background-color: black;
+}
+
+.main {
+  font-size: 16px;
+  min-height: 80vh;
+  color: white;
+}
+
+.carousel-item {
+  min-height: 80vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);
+  background-size: cover;
+}
+
+.carousel-caption {
+  left: 5%;
+  text-align: left;
+  max-width: 50%;
+  right: auto;
+}
+
+.description {
+  line-height: 1.75em;
+  max-width: 50%;
+}
+
+.titulo {
+  color: white;
+}
+
+
+.poster {
+  height: 40vh;
+  width: 30vh;
+  background-image: url("https://image.tmdb.org/t/p/w500//pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg");
+  background-size: cover;
+}
+
+
+@media screen and (max-width: 768px) {
+  .main {
+    font-size: 14px;
+  }
+  .carousel-item {
+    background-position: center center;
+  }
+  .carousel-caption {
+      max-width: 100%;
+      text-align: center;
+  }
+  .poster {
+      background-position: center;
+  }
+}

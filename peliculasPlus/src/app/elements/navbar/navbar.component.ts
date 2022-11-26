@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { TmdbService } from 'src/app/tmdb.service';
 
 @Component({
   selector: 'app-navbar',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  data: any;
+  constructor(private service: TmdbService) { }
 
   ngOnInit(): void {
+    this.service.getGenres()
+    .subscribe(res => {
+      this.data = res;
+    })
   }
 
 }
