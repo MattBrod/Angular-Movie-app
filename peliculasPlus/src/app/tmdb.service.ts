@@ -10,7 +10,7 @@ export class TmdbService {
   private baseUrl = "https://api.themoviedb.org/3";
   private trendingUrl = '/trending/movie/week?';
   private genresUrl = '/genre/movie/list?';
-  public img_url = 'https://image.tmdb.org/t/p/w500';
+  public img_url = 'https://image.tmdb.org/t/p/original';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -22,10 +22,6 @@ export class TmdbService {
   getTrending = () => {
     let url = this.baseUrl + this.trendingUrl + this.apiKeyEs;
     return this.httpClient.get(url);
-  }
-
-  getImgUrl = () => {
-
   }
 
 }

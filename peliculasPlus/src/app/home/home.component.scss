@@ -8,7 +8,7 @@ body {
   color: white;
 }
 
-.carousel-item {
+.carousel-item.backdrop{
   min-height: 80vh;
   background: linear-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%);
   background-size: cover;
@@ -26,24 +26,12 @@ body {
   max-width: 50%;
 }
 
-.titulo {
-  color: white;
-}
-
-
-.poster {
-  height: 40vh;
-  width: 30vh;
-  background-image: url("https://image.tmdb.org/t/p/w500//pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg");
-  background-size: cover;
-}
-
 
 @media screen and (max-width: 768px) {
   .main {
     font-size: 14px;
   }
-  .carousel-item {
+  .carousel-item.backdrop {
     background-position: center center;
   }
   .carousel-caption {
