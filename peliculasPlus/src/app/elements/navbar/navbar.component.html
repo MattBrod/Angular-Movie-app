@@ -28,7 +28,7 @@
           </a>
           <ul class="dropdown-menu">
             <li *ngFor="let genre of data.genres">
-              <a class="dropdown-item" href="genre">{{genre.name}}</a>
+              <a class="dropdown-item" href="genre" (click)="setGenre(genre.id)">{{genre.name}}</a>
             </li>
           </ul>
         </li>
