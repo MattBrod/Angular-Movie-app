@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { TmdbService } from 'src/app/tmdb.service';
 
 @Component({
@@ -20,7 +20,7 @@ export class NavbarComponent implements OnInit {
   }
 
   setGenre = (id: any) => {
-    // this.genreId.emit('&with_genres=' + id)
+    sessionStorage.setItem('genreId', '&with_genres='+id);
   }
 
 }
