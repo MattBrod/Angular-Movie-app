@@ -10,6 +10,7 @@ export class NavbarComponent implements OnInit {
 
   data: any;
 
+
   constructor(private service: TmdbService) { }
 
   ngOnInit(): void {
@@ -20,7 +21,13 @@ export class NavbarComponent implements OnInit {
   }
 
   setGenre = (id: any) => {
-    sessionStorage.setItem('genreId', '&with_genres='+id);
+    sessionStorage.setItem('genreId', this.service.baseUrl + this.service.moviesUrl + this.service.apiKeyEs +'&with_genres='+ id);
+    sessionStorage.setItem('page=', '0');
+  }
+
+  searchTerm = (query: any) => {
+    sessionStorage.setItem('genreId', this.service.baseUrl + this.service.searchURL + this.service.apiKeyEs + '&query=' + query)
+    sessionStorage.setItem('page=', '0');
   }
 
 }

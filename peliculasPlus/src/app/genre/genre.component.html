@@ -6,17 +6,19 @@
 
 <div class="container">
 
+  <div class="no-results" *ngIf="data.results.length == 0">Sin resultados</div>
+
   <div class="row">
     <div class="col-3"  *ngFor="let peli of data.results">
         <app-card [name]="peli.title" [img]="peli.poster_path"></app-card>
     </div>
   </div>
 
-  <nav aria-label="Page navigation example">
+  <nav aria-label="Page navigation example" *ngIf="data.results.length > 0">
     <ul class="pagination">
-      <li class="page-item"><a class="page-link" href="#">Previous</a></li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      <li [ngClass]="{'disabled' : this.prevPage < 1}"><a class="page-link" href="genre" (click)="prevMoviePage()">Anterior</a></li>
+      <li class="page-item"><a class="page-link" href="genre">{{data.page}}</a></li>
+      <li [ngClass]="{'disabled' : this.nextPage > this.totalPages}"><a class="page-link" href="genre" (click)="nextMoviePage()">Siguiente</a></li>
     </ul>
   </nav>
 </div>

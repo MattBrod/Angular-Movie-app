@@ -19,7 +19,6 @@ export class CarouselComponent implements OnInit {
     this.service.getTrending()
     .subscribe(res => {
       this.data = res;
-      console.log(this.data.results);
     })
   }
 

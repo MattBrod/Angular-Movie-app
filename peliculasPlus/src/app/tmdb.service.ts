@@ -12,13 +12,9 @@ export class TmdbService {
   private genresUrl = '/genre/movie/list?';
   public moviesUrl = '/discover/movie?sort_by=popularity.desc&'
   public img_url = 'https://image.tmdb.org/t/p/original';
-
-  private searchURL = '/search/movie?'
-
-  public boton: any;
+  public searchURL = '/search/movie?'
 
   private url1 = this.baseUrl + this.genresUrl + this.apiKeyEs;
-  // private url2 = this.baseUrl + this.moviesUrl + this.apiKeyEs + this.boton;
   private url3 = this.baseUrl + this.trendingUrl + this.apiKeyEs;
 
   constructor(private httpClient: HttpClient) { }

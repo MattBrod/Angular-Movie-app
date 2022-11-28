@@ -33,15 +33,10 @@
           </ul>
         </li>
         <li class="nav-item">
-          <form role="search">
-            <input
-              class="form-control"
-              id="search"
-              type="search"
-              placeholder="Buscar"
-              aria-label="Buscar"
-            />
-          </form>
+          <div class="input-group">
+            <input class="form-control" #search id="search" type="text" placeholder="Buscar"/>
+            <button class="btn btn-outline-secondary" type="button" (click)="searchTerm(search.value)"><a type="button" href="genre"><i class="bi bi-search"></i></a></button>
+          </div>
         </li>
       </ul>
     </div>
