@@ -20,6 +20,12 @@ nav {
 .dropdown-menu {
   max-height: 40vh;
   overflow-y: auto;
+  background: #4d4373;
+}
+
+.dropdown-item {
+  background: #4d4373;
+  color: #9793a6;
 }
 
 #search {

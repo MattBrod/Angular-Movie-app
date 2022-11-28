@@ -1,10 +1,10 @@
 <app-navbar></app-navbar>
 <!-- PELI PRINCIPAL -->
-<div id="maincarouselControls" class="main mb-3 carousel slide" data-bs-ride="carousel">
+<div id="maincarouselControls" class="main mb-3 carousel slide carousel-fade" data-bs-ride="carousel">
   <div class="carousel-inner">
-    <div class="carousel-item backdrop" *ngFor="let peli of data.results.slice(0,5); let i = index" [ngClass]="{'active': i === 1}" [ngStyle]="{'background-image':'linear-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%) , url(' + haha+peli.backdrop_path + ')'}">
+    <div class="carousel-item backdrop" data-bs-interval="10000" *ngFor="let peli of data.results.slice(0,5); let i = index" [ngClass]="{'active': i === 1}" [ngStyle]="{'background-image':'linear-gradient(rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%) , url(' + haha+peli.backdrop_path + ')'}">
       <div class="carousel-caption pb-0">
-        <h1 class="display-6 fw-bold mb-3">{{peli.title}}</h1>
+        <a href="detail"><h1 class="display-6 fw-bold mb-3">{{peli.title}}</h1></a>
         <p class="mb-0">{{peli.overview}}</p>
       </div>
     </div>

@@ -21,6 +21,19 @@ body {
   right: auto;
 }
 
+.carousel-control-next, .carousel-control-prev {
+  width: 5vw;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  color: inherit;
+}
+
 .description {
   line-height: 1.75em;
   max-width: 50%;

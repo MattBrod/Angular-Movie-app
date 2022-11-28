@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 import { CarouselComponent } from './carousel/carousel.component';
+import { CardComponent } from './card/card.component';
 
 
 
@@ -10,7 +11,8 @@ import { CarouselComponent } from './carousel/carousel.component';
   declarations: [
     NavbarComponent,
     FooterComponent,
-    CarouselComponent
+    CarouselComponent,
+    CardComponent
   ],
   imports: [
     CommonModule
@@ -18,7 +20,8 @@ import { CarouselComponent } from './carousel/carousel.component';
   exports: [
     NavbarComponent,
     FooterComponent,
-    CarouselComponent
+    CarouselComponent,
+    CardComponent
   ]
 })
 export class ElementsModule { }

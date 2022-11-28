@@ -6,22 +6,34 @@ import { HttpClient } from '@angular/common/http';
 })
 export class TmdbService {
 
-  private apiKeyEs = "api_key=9e50c5a0f175a40039150639aa6dfa43&language=es-ES";
-  private baseUrl = "https://api.themoviedb.org/3";
+  public apiKeyEs = "api_key=9e50c5a0f175a40039150639aa6dfa43&language=es-ES";
+  public baseUrl = "https://api.themoviedb.org/3";
   private trendingUrl = '/trending/movie/week?';
   private genresUrl = '/genre/movie/list?';
+  public moviesUrl = '/discover/movie?sort_by=popularity.desc&'
   public img_url = 'https://image.tmdb.org/t/p/original';
+
+  private searchURL = '/search/movie?'
+
+  public boton: any;
+
+  private url1 = this.baseUrl + this.genresUrl + this.apiKeyEs;
+  // private url2 = this.baseUrl + this.moviesUrl + this.apiKeyEs + this.boton;
+  private url3 = this.baseUrl + this.trendingUrl + this.apiKeyEs;
 
   constructor(private httpClient: HttpClient) { }
 
   getGenres = () => {
-    let url = this.baseUrl + this.genresUrl + this.apiKeyEs;
+    return this.httpClient.get(this.url1);
+  }
+
+  getMovies = (url: any) => {
     return this.httpClient.get(url);
   }
 
   getTrending = () => {
-    let url = this.baseUrl + this.trendingUrl + this.apiKeyEs;
-    return this.httpClient.get(url);
+    return this.httpClient.get(this.url3);
   }
+
 
 }

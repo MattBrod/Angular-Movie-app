@@ -9,6 +9,7 @@ import { TmdbService } from 'src/app/tmdb.service';
 export class NavbarComponent implements OnInit {
 
   data: any;
+
   constructor(private service: TmdbService) { }
 
   ngOnInit(): void {
@@ -16,6 +17,10 @@ export class NavbarComponent implements OnInit {
     .subscribe(res => {
       this.data = res;
     })
+  }
+
+  setGenre = (id: any) => {
+    // this.genreId.emit('&with_genres=' + id)
   }
 
 }
