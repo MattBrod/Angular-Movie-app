@@ -10,7 +10,7 @@
 
   <div class="row">
     <div class="col-3"  *ngFor="let peli of data.results">
-        <app-card [name]="peli.title" [img]="peli.poster_path"></app-card>
+        <app-card [name]="peli.title" [img]="peli.poster_path" [id]="peli.id"></app-card>
     </div>
   </div>
 

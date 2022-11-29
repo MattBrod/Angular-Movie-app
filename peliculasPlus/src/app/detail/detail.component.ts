@@ -18,7 +18,7 @@ export class DetailComponent implements OnInit {
     this.service.getMovies(this.movie)
     .subscribe(res => {
       this.data = res;
-      console.log(this.haha + this.data.poster_path)
+      console.log(this.data)
     })
   }
 
