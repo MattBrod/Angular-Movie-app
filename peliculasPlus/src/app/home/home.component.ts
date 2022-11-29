@@ -22,4 +22,8 @@ export class HomeComponent implements OnInit {
     })
   }
 
+  setMovieDetails = (id: any) => {
+    sessionStorage.setItem('movieId', this.service.baseUrl + this.service.detailUrl + id + '?' + this.service.apiKeyEs);
+  }
+
 }

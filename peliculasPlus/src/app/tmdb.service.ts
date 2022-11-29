@@ -13,6 +13,7 @@ export class TmdbService {
   public moviesUrl = '/discover/movie?sort_by=popularity.desc&'
   public img_url = 'https://image.tmdb.org/t/p/original';
   public searchURL = '/search/movie?'
+  public detailUrl = '/movie/'
 
   private url1 = this.baseUrl + this.genresUrl + this.apiKeyEs;
   private url3 = this.baseUrl + this.trendingUrl + this.apiKeyEs;

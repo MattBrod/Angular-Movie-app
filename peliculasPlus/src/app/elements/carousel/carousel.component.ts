@@ -30,4 +30,8 @@ export class CarouselComponent implements OnInit {
     this.widgetsContent.nativeElement.scrollLeft += 800;
   }
 
+  setMovieDetails = (id: any) => {
+    sessionStorage.setItem('movieId', this.service.baseUrl + this.service.detailUrl + id + '?' + this.service.apiKeyEs);
+  }
+
 }

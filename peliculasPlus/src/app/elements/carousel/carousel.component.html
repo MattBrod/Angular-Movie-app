@@ -8,7 +8,7 @@
       <div #widgetsContent class="carousel-item active d-flex align-items-center">
 
         <div class="poster" *ngFor="let peli of data.results" [ngStyle]="{'background-image':'url(' + haha+peli.poster_path + ')'}">
-          <a href="detail"><div class="fill"></div></a>
+          <a href="detail" (click)="setMovieDetails(peli.id)"><div class="fill"></div></a>
         </div>
       </div>
 
