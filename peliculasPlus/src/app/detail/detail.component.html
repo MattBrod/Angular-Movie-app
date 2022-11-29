@@ -1,8 +1,13 @@
 <app-navbar></app-navbar>
 
 <div class="container">
-  <div class="poster" [ngStyle]="{'background-image':'url(' + haha+data.poster_path + ')'}">
+  <div class="row">
+    <div class="col-4">
+      <div class="poster" [ngStyle]="{'background':'url(' + haha+data.poster_path + ')'}"></div>
+    </div>
+    <div class="col"></div>
   </div>
+
 </div>
 
 
